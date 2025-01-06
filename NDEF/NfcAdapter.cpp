@@ -3,6 +3,7 @@
 NfcAdapter::NfcAdapter(PN532Interface &interface)
 {
     shield = new PN532(interface);
+    shield->setPassiveActivationRetries(10);
 }
 
 NfcAdapter::~NfcAdapter(void)
